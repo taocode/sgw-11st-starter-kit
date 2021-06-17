@@ -1,0 +1,19 @@
+{% layout 'base.html' %} {% block content %}
+<article class="mb-8">
+  <div class="text-center">
+  <h1
+    class="pt-2 pb-8 text-3xl leading-8 uppercase tracking-tight sm:text-4xl sm:leading-10"
+  >
+    {{ intro.title }}
+  </h1>
+
+  <p class="text-xl text-gray-800 font-display leading-8 mb-8 ">{{ intro.desc }}</p>
+  </div>
+
+  <div class="prose prose-xl text-gray-800">{{ content }}</div>
+</article>
+<div class="text-center mt-16 mb-16 bg-colo"><div class="sharethis-inline-reaction-buttons"></div></div>
+{% endblock %}
+{% block scripts %}
+<script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5f9d5eb46de86200192a48a6&product=sticky-share-buttons" async="async"></script>
+{% endblock %}

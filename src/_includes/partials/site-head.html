@@ -1,7 +1,7 @@
-{% assign page_title = title | append: ' :: ' | append: site.name %}
+{% assign page_title = title | append: ' :: 🧊' | append: site.name %}
 
 {% if site.name == title %} 
-  {% assign page_title = title %}
+  {% assign page_title = '🧊' | append: title %}
 {% endif %}
 
 {% assign site_title = site.name %}
@@ -46,31 +46,15 @@
 
 <meta name="theme-color" content="#4a5568" />
 
-<link rel="apple-touch-icon" href="/images/icons/icon-192x192.png" />
 <link rel="icon" href="/images/icons/favicon.svg" type="image/svg+xml" />
+<link rel="alternate icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png" />
 <link rel="manifest" href="/manifest.json" />
 
 <!-- Preconnect to the font file origin -->
-<link
-  rel="preconnect"
-  href="https://rsms.me"
-  crossorigin
-/>
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
 
-<!-- Preload the font stylesheet asynchronously with low priority -->
-<link
-  rel="preload"
-  href="https://rsms.me/inter/inter.css"
-  as="style"
-/>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;1,500&display=fallback" rel="stylesheet">
 
-<!-- https://www.filamentgroup.com/lab/load-css-simpler/ -->
-<link
-  crossorigin="anonymous"
-  rel="stylesheet"
-  href="https://rsms.me/inter/inter.css"
-  media="print"
-  onload="this.media='all'; this.onload=null;"
-/>
 
 <link rel="stylesheet" href="/styles/index.css" />

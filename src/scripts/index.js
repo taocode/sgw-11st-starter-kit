@@ -17,3 +17,33 @@ if ('serviceWorker' in navigator && env === 'production') {
     }
   });
 }
+
+import Headroom from 'headroom.js';
+// grab an element
+// var myElement = document.querySelector(".fixed.headroom");
+// construct an instance of Headroom, passing the element
+// var headroom  = new Headroom(myElement);
+// initialise
+// headroom.init();
+var elem = document.querySelector('.fixed.headroom');
+function offsetFun() {
+  var headroomOffset = 160;
+  var intro = document.querySelector('#intro');
+  if (!intro) {
+    // console.log('no intro to worry about...');
+    return headroomOffset;
+  } else {
+    // console.info('bcr height:',intro.getBoundingClientRect().height,'offsetHeight',intro.offsetHeight);
+    return intro.offsetHeight + headroomOffset;
+  }
+}
+var headroom = new Headroom(elem, {
+  offset: offsetFun(),
+  tolerance: 5,
+  // "classes": {
+  //   "initial": "animated",
+  //   "pinned": "slideDown",
+  //   "unpinned": "slideUp"
+  // }
+});
+headroom.init();

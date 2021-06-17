@@ -1,6 +1,6 @@
 {
-  "name": "11st-starter-kit",
-  "description": "11ty, powered by Snowpack with Tailwind CSS and Alpine.js.",
+  "name": "sugargeneralwarning-11st-starter-kit",
+  "description": "Based on 11st-starter-kit 11ty, powered by Snowpack with Tailwind CSS and Alpine.js.",
   "version": "1.0.0",
   "engines": {
     "node": "14.x.x",
@@ -9,25 +9,33 @@
   "main": "index.js",
   "repository": {
     "type": "git",
+    "url": "git@github.com:taocode/sugargeneralwarning.com"
+  },
+  "upstreamrepository": {
+    "type": "git",
     "url": "git@github.com:stefanfrede/11st-starter-kit.git"
   },
   "keywords": [
     "alpinejs",
     "eleventy",
-    "netlify",
+    "firebase",
     "snowpack",
     "tailwindcss"
   ],
   "author": {
+    "name": "Mark Jones",
+    "email": "mark@taocode.com"
+  },
+  "upstreamauthor": {
     "name": "Stefan Frede",
     "email": "stefan@frede.dev"
   },
   "license": "MIT",
   "private": true,
   "bugs": {
-    "url": "https://github.com/stefanfrede/11st-starter-kit/issues"
+    "url": "https://github.com/taocode/sugargeneralwarning.com/issues"
   },
-  "homepage": "https://11st-starter-kit.netlify.app",
+  "homepage": "https://sugargeneralwarning.com",
   "browserslist": [
     "defaults",
     "maintained node versions",
@@ -88,10 +96,13 @@
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^22.0.0",
     "stylelint-order": "^4.1.0",
+    "svg-sprite": "^1.5.0",
     "tailwindcss": "^2.1.2",
+    "vinyl": "^2.2.1",
     "workbox-cli": "^6.1.5"
   },
   "dependencies": {
-    "alpinejs": "^3.0.1"
+    "alpinejs": "^3.0.1",
+    "headroom.js": "^0.12.0"
   }
 }

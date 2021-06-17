@@ -1,3 +1,176 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer base { 
+  h1 {
+    @apply text-6xl;
+    @apply font-display;
+  }
+  h2 {
+    @apply text-2xl;
+    @apply font-display;
+  }
+  a {
+    @apply underline;
+
+    text-decoration-color: rgba(99,179,237,0.4);
+    transition: all 0.3s ease-in-out;
+    @apply bg-gradient-to-t;
+    @apply from-transparent;
+    @apply via-transparent;
+    @apply to-transparent;
+  }
+  a:hover,a:focus {
+    @apply from-blue-400;
+    @apply via-white;
+    @apply to-transparent;
+
+    text-decoration-color: rgba(99,179,237,0);
+  }
+  :target::before {
+    content: "";
+    display: block;
+  }
+}
+
+html,
+body {
+    scroll-padding-top: 1.5rem;
+
+     /* set to the height of your header */
+}
+
+::selection {
+  background: rgba(99,179,237,0.2);
+  color: #07406b;
+  text-decoration-color: rgba(80,150,220,0.9);
+}
+
+
+
+sup {
+  font-size: 0.6em;
+  font-weight: 400;
+}
+sup a {
+  font-style: italic;
+  padding: 0 0.1em 0.2em 0.2em;
+
+  /* color: navy; */
+  text-decoration: none;
+}
+.prose a {
+  text-decoration-color: rgba(99,179,237,0.4);
+  &:hover {
+    text-decoration-color: rgba(99,179,237,0);
+  }
+}
+.prose img {
+  border-color: rgba(99,179,237,0.4);
+  margin: 1em;
+  &:hover {
+    border-color: rgba(99,179,237,1);
+  }
+}
+main,
+article {
+  &:focus {
+    outline: none;
+  }
+}
+.prose .icon {
+  display: inline-block;
+}
+ol li:target {
+  outline: 2px dashed blue;
+}
+ol ol {
+  line-height: 2;
+  list-style-type: lower-alpha;
+  margin-bottom: 1em;
+  margin-top: 0.5em;
+  padding: 0 0 0.5em 1em;
+}
+
+h1,h2,h3,h4,h5,h6,li {
+  /* &:target::before {
+    content: "";
+    display: block;
+    height: 5rem;
+    margin-top: -5rem;
+  } */
+  .anchor {
+      display: inline-block;
+      margin-left: 0.2em;
+      opacity: 0.1;
+      transition: all .3s ease;
+    .icon {
+      border-bottom: 2px solid rgba(99,179,237, 0.4);
+      display: inline;
+      height: 1em;
+      padding-top: 0.2em;
+      vertical-align: baseline;
+      width: auto;
+      &:hover {
+        border-bottom-color: rgb(99,179,237, 0);
+      }
+    }
+  }
+  &:hover,&:focus-within {
+      .anchor {
+          border-bottom-color: rgba(99,179,237, 0.3);
+          color: blue !important;
+          opacity: 1;
+      }
+  }
+  &.no-anchor {
+    .anchor {
+        display: none;
+    }
+  }
+}
+
+
+/* headroom start */
+.headroom {
+  transition: transform 200ms linear;
+  will-change: transform;
+  &:focus-within {
+    transform: translateY(0%);
+    z-index: 60;
+  }
+}
+.headroom--pinned {
+  transform: translateY(0%);
+}
+.headroom--unpinned {
+  transform: translateY(-102%);
+}
+
+abbr[title] {
+  position: relative;
+  
+  /* ensure consistent styling across browsers */
+  text-decoration: underline dotted; 
+}
+
+abbr[title]:hover::after,
+abbr[title]:focus::after {
+  /* style tooltip */
+  background-color: #1e1e1e;
+  border-radius: 3px;
+  bottom: -30px;
+  box-shadow: 1px 1px 5px 0 rgba(0,0,0,0.4);
+  color: #fff;
+  content: attr(title);
+  font-size: 14px;
+  left: 0;
+  padding: 3px 5px;
+  
+  /* position tooltip like the native one */
+  position: absolute;
+  white-space: nowrap;
+  width: auto;
+}

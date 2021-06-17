@@ -1,0 +1,22 @@
+{% layout 'base.html' %} {% block content %}
+<article class="mb-8">
+  <div class="text-center">
+  <h1
+    class="pt-2 pb-8 text-3xl leading-8 uppercase tracking-tight sm:text-4xl sm:leading-10"
+  >
+    {{ intro.title }}
+  </h1>
+
+  <p class="text-xl text-gray-800 font-display leading-8 mb-8 ">{{ intro.desc }}</p>
+  </div>
+
+  <div class="prose prose-xl text-gray-800">{{ content }}</div>
+</article>
+
+<div class="px-4 py-8 sm:px-0">
+  <div class="flex items-center justify-center">
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf6eLyUveSR7XzDj-Ax_q-WdRO6h-BPd8cAIEJ6BRNlWgdCyg/viewform?embedded=true" width="640" height="1000" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+  </div>
+</div>
+
+{% endblock %}

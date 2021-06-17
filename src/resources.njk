@@ -1,0 +1,162 @@
+---
+layout: 'layouts/page.html'
+title: 'Resources for breaking sugar addiction'
+meta:
+  desc:
+    'Resources, information and links to sites you may find helpful in taking control of sugar addiction.'
+intro:
+  title: 'Resources to Quit Sugar'
+  desc: 'Looking for information and help kicking a bad sugar habit?'
+sugarf: 24
+sugarm: 36
+drinks:
+  - ["Coca-Cola",12,39,9.5,140,163,108]
+  - ["Pepsi-Cola",12,41,10,150,171,114]
+  - ["Orange Crush",12,43,10.2,195,179,120]
+  - ["Ocean Spray 100% Cranberry Juice*",8,36,8.6,140,119,100]
+  - ["Orange Juice",8,26,6.2,110,108,72]
+sauces:
+  - ["Trader Joe's Organic Ketchup",1,5,1.2,20]
+  - ["Stubb's Spicy BBQ Sauce",2,6,1.5,25]
+  - ["Sweet Baby Ray's Original Barbecue Sauce",2,17,4.1,70]
+  - ["Sky Valley Sriracha Hot Chili Sauce",1,1,0.25,5]
+  - ["Trader Joe's Organic Coconut Aminos",1,5,1.2,20]
+foods:
+  - ["Banana (medium)",1,7.1,1.7,105]
+  - ["Strawberries","1 cup",4.1,0.9,49]
+  - ["Cherries",30,12,2.9,150]
+  - ["Apples (medium)",1,12.6,3,105]
+  - ["Zucchini",1 cup,3,0.72,29]
+---
+
+<h2 id="quick-reference">Sugar Quantity Quick Reference  <a class="anchor" href="#quick-reference">{% icon "link" %}</a></h2>
+
+<p>It can be shocking to discover just how much sugar, fruit juice concentrate and <abbr title="High Fructose Corn Syrup">HFCS</abbr> is included in drinks, condiments, bread and more. Read the label. Check out the below charts for a quick reference to a very short list of common drinks and foods.</p>
+
+<h3 id="drinks">Drinks <a class="anchor" href="#drinks">{% icon "link" %}</a></h3>
+<div class="prose md:prose-xl lg:prose-2xl">
+<table class="table-auto">
+<thead class="hidden md:table-header-group">
+<tr class="">
+<th rowspan="2">Drink</th>
+<th rowspan="2" class="text-center"><abbr title="Amount of drink in ounces">oz</abbr></th>
+<th colspan="3" class="text-center border-none"><abbr title="Total carbohydrates (sugar)">Simple Carbs</abbr></th>
+<th colspan="2" class="text-center"><abbr title="based on American Heart Association recommendations">% of</abbr> <abbr title="Recommended Daily Value">RDV</abbr></th>
+</tr>
+<tr class="text-center">
+<th><abbr title="grams"> g </abbr></th>
+<th><abbr title="US Teaspoons">Tsps</abbr></th>
+<th><abbr title="Calories (Kcal)">Cal</abbr></th>
+<th><abbr title="Women"> {% icon "female" %} </abbr></th>
+<th><abbr title="Men"> {% icon "male" %} </abbr></th>
+</tr>
+</thead>
+<tbody class="p-0">
+{% for d in drinks %}
+<tr class="block leading-tight md:table-row{% if loop.index % 2 == 1 %} bg-gray-100{% endif %}">
+<td class="inline-block p-0 md:table-cell">{{ d[0] }}</td>
+<td class="inline-block p-0 md:table-cell">{{ d[1] }}<abbr title="ounces" class="md:hidden">oz</abbr></td>
+<td class="inline-block p-0 md:table-cell">{{ d[2] }}<abbr title="grams" class="md:hidden">g</abbr></td>
+<td class="inline-block p-0 md:table-cell">{{ d[3] }}<abbr title="teaspoons" class="md:hidden">tsps</abbr></td>
+<td class="inline-block p-0 md:table-cell">{{ d[4] }}<abbr title="kcalories" class="md:hidden">cal</abbr></td>
+<td class="inline-block p-0 md:table-cell whitespace-no-wrap"><abbr title="AHA % recommended daily value for men (American Heart Association)" class="md:hidden">{% icon "female" %}: </abbr>{{ (d[2]/sugarf*100) | toWholeNumber }}%</td>
+<td class="inline-block p-0 md:table-cell whitespace-no-wrap"><abbr title="AHA % recommended daily value for women (American Heart Association)"  class="md:hidden">{% icon "male" %}: </abbr>{{ (d[2]/sugarm*100) | toWholeNumber }}%</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+</div>
+
+<p>*Claims no sugar added - uses fruit juice concentrates.</p>
+
+<p>Since a large quantity of sugar comes in the form of soft drinks. Be sure to read the ingredients, beverage produces will advertize "No Sugar Added", most of the time this means they've used fruit juice or fruit juice concentrate instead of sugar. Please understand that this has all the same negative effects of sugar on our bodies.</p>
+
+<h3 id="sauces">Sauces <a class="anchor" href="#sauces">{% icon "link" %}</a></h3>
+<div class="prose md:prose-xl lg:prose-2xl">
+<table class="table-auto w-full">
+<thead class="hidden md:table-header-group">
+<tr class="">
+<th rowspan="2">Sauce</th>
+<th rowspan="2" class="text-center"><abbr title="Amount in tablespoons">Tbs</abbr></th>
+<th colspan="3" class="text-center border-none"><abbr title="Total carbohydrates (sugar)">Simple Carbs</abbr></th>
+<th colspan="2" class="text-center"><abbr title="based on American Heart Association recommendations">% of</abbr> <abbr title="Recommended Daily Value">RDV</abbr></th>
+</tr>
+<tr class="text-center">
+<th><abbr title="grams"> g </abbr></th>
+<th><abbr title="US Teaspoons">Tsps</abbr></th>
+<th><abbr title="Calories (Kcal)">Cal</abbr></th>
+<th><abbr title="Women"> {% icon "female" %} </abbr></th>
+<th><abbr title="Men"> {% icon "male" %} </abbr></th>
+</tr>
+</thead>
+<tbody class="p-0">
+{% for d in sauces %}
+<tr class="block leading-tight md:table-row{% if loop.index % 2 == 1 %} bg-gray-100{% endif %}">
+<td class="inline-block p-0 md:table-cell">{{ d[0] }}</td>
+<td class="inline-block p-0 md:table-cell">{{ d[1] }}<abbr title="tablespoons" class="md:hidden">Tbs</abbr></td>
+<td class="inline-block p-0 md:table-cell">{{ d[2] }}<abbr title="grams" class="md:hidden">g</abbr></td>
+<td class="inline-block p-0 md:table-cell">{{ d[3] }}<abbr title="teaspoons" class="md:hidden">tsps</abbr></td>
+<td class="inline-block p-0 md:table-cell">{{ d[4] }}<abbr title="kcalories" class="md:hidden">cal</abbr></td>
+<td class="inline-block p-0 md:table-cell whitespace-no-wrap"><abbr title="AHA % recommended daily value for men (American Heart Association)" class="md:hidden">{% icon "female" %}: </abbr>{{ (d[2]/sugarf*100) | toWholeNumber }}%</td>
+<td class="inline-block p-0 md:table-cell whitespace-no-wrap"><abbr title="AHA % recommended daily value for women (American Heart Association)"  class="md:hidden">{% icon "male" %}: </abbr>{{ (d[2]/sugarm*100) | toWholeNumber }}%</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+</div>
+
+<p>As you can see, sauces vary wildly in thir quantity of sugar. We have to read the labels if we want to know what we're consuming.</p>
+
+<h3 id="foods">Foods <a class="anchor" href="#foods">{% icon "link" %}</a></h3>
+
+<div class="prose md:prose-xl lg:prose-2xl">
+<table class="table-auto w-full">
+<thead class="hidden md:table-header-group">
+<tr class="">
+<th rowspan="2">Sauce</th>
+<th rowspan="2" class="text-center"><abbr title="Quantity">Qty</abbr></th>
+<th colspan="3" class="text-center border-none"><abbr title="Total carbohydrates (sugar)">Simple Carbs</abbr></th>
+<th colspan="2" class="text-center"><abbr title="based on American Heart Association recommendations">% of</abbr> <abbr title="Recommended Daily Value">RDV</abbr></th>
+</tr>
+<tr class="text-center">
+<th><abbr title="grams"> g </abbr></th>
+<th><abbr title="US teaspoons">Tsps</abbr></th>
+<th><abbr title="Calories (Kcal)">Cal</abbr></th>
+<th><abbr title="Women"> {% icon "female" %} </abbr></th>
+<th><abbr title="Men"> {% icon "male" %} </abbr></th>
+</tr>
+</thead>
+<tbody class="p-0">
+{% for d in foods %}
+<tr class="block leading-tight md:table-row{% if loop.index % 2 == 1 %} bg-gray-100{% endif %}">
+<td class="inline-block p-0 md:table-cell">{{ d[0] }}</td>
+<td class="inline-block p-0 md:table-cell">{{ d[1] }}<abbr title="quantity" class="md:hidden">Qty</abbr></td>
+<td class="inline-block p-0 md:table-cell">{{ d[2] }}<abbr title="grams" class="md:hidden">g</abbr></td>
+<td class="inline-block p-0 md:table-cell">{{ d[3] }}<abbr title="teaspoons" class="md:hidden">tsps</abbr></td>
+<td class="inline-block p-0 md:table-cell">{{ d[4] }}<abbr title="kcalories" class="md:hidden">cal</abbr></td>
+<td class="inline-block p-0 md:table-cell whitespace-no-wrap"><abbr title="AHA % recommended daily value for men (American Heart Association)" class="md:hidden"> {% icon "male" %}: </abbr>{{ (d[2]/sugarf*100) | toWholeNumber }}%</td>
+<td class="inline-block p-0 md:table-cell whitespace-no-wrap"><abbr title="AHA % recommended daily value for women (American Heart Association)"  class="md:hidden">{% icon "male" %}: </abbr>{{ (d[2]/sugarm*100) | toWholeNumber }}%</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+</div>
+<p>I hope these shed some light on how natural foods contain considerably less sugar than anything processed and packaged when you consider the satiating and nutritional quality. Comparing the natural sugars present in fruits or vegetables to processed sweeteners isn't a fair comparison as natural foods always have fiber and other useful nutritive enzymes, phytonutrients, vitamins, minerals and contribute to your health. Strictly speaking, the RDV is for <em>added sugar</em>, aka processed sweeteners, so it's not even relevant to fructose naturally found in fruit.</p>
+
+<h3 id="rdv">About our Recommended Daily Value (RDV)</h3>
+<p>Our tables calculating the % of RDV are based on a maximum of 36g per man and 24g per woman. These numbers are in accordance with the AMA, AHA, and CDC for <em>added sugars</em>.</p>
+
+<h3 id="helpful-links">Helpful Links <a class="anchor" href="#helpful-links">{% icon "link" %}</a></h3>
+
+<ul>
+<li><a target="_blank" href="https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/sugar/sugar-101">American Heart Association: Sugar 101</a></li>
+<li><a target="_blank" href="https://www.myfitnesspal.com/food/search">myfitnesspal: Calorie Counter with popular foods</a></li>
+<li><a target="_blank" href="https://www.fatsecret.com/calories-nutrition/">FatSecret: Nutrition &amp; calories for popular foods</a></li>
+<li><a target="_blank" href="http://whole9life.com/2011/11/fructose-foolishness/">Whole9: Fructos Foolishness - comparing real food to a 20 oz Pepsi</a></li>
+<li><a target="_blank" href="https://nutritiondata.self.com/">NutritionData: know what you eat</a></li>
+{#
+<li><a href=""></a></li>
+#}
+</ul>
+
+<p>&nbsp;</p>

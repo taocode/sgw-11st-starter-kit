@@ -1,36 +1,19 @@
 ---
-layout: 'layouts/home.html'
-title: 'Home'
+layout: 'layouts/page.html'
+title: 'About'
+includeSiteNav: false
 meta:
   desc:
-    '11st-Starter-Kit is a minimal starting point for building static websites
-    with 11ty, powered by Snowpack with Tailwind CSS and Alpine.js.'
+    'Produced by Horse & Fox Joint Productions, 2 overly bearded men who care and want to share useful ideas.'
 intro:
-  title: 'Get Yours'
-  desc:
-    'Clone and deploy your own <span class="text-gray-900 font-semibold">11st
-    Starter-Kit</span> starter template.'
+  title: 'About Sugar General Warning'
+  desc: 'Produced by <a class="" href="https://horseandfoxjoints.com/">Horse &amp; Fox Joint Productions</a> - a couple of overly bearded men aiming to pass on something useful to our fellow humans. This information reflects our views and has been paid for by us. Our interest is in your health and well being; we hope you find it both useful and entertaining.'
 ---
 
-## Hosting
+<h2 id="why">OK, but why? <em>Really.</em> <a class="anchor" href="#why">{% icon "link" %}</a></h2>
 
-This site is deployed by, and hosted by [Netlify](https://www.netlify.com/). 
+Inspired by what we thought a *Surgeon General's Warning on Sugar* would look like, we based our statements off the Surgeon General's Warning printed on cigarrette packages added in 1984. This site and the resulting <a href="/downloads/sugar-general-warning-sheet-8bit.pdf">warning label sheet</a> were then produced. Please feel free to print out your own warning labels and stick them to packages of high sugar foods in your pantry or in your favorite store.
 
-<p class="flex items-center m-0">
-  Latest deploy status:
-  <a href="https://app.netlify.com/sites/11st-starter-kit/deploys" class="ml-2">
-    <img
-      src="https://api.netlify.com/api/v1/badges/ec6da587-72ba-490a-ad4b-167802a9c197/deploy-status"
-      style="margin: 0"
-      alt="Netlify Status"
-    />
-  </a>
-</p>
+<h2 id="language">Blunt, Plain Language <a class="anchor" href="#blunt">{% icon "link" %}</a></h2>
 
-## One-click deploy
-To get your own instance of this [Eleventy](https://11ty.io) starter project
-cloned and deploying to [Netlify](https://www.netlify.com) very quickly, just
-click the button below and follow the instructions.
-
-[![Deploy to Netlify](/images/deploy-to-netlify.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/stefanfrede/11st-starter-kit)
-
+Our warning uses plain, blunt language, certainly stronger than what a network news anchor would report. Network news agencies have a responsibility to their advertisers, we have a responsibility to our conscience. We stand by the dangers and complications of excess sugar consumption on your health. Learn more from our [resources page](/resources/), including links and common quantities of sugar for common foods.
