@@ -1,7 +1,7 @@
-{% assign page_title = title | append: ' :: 🧊' | append: site.name %}
+{% assign page_title = title | append: ' :: ' | append: site.name %}
 
 {% if site.name == title %} 
-  {% assign page_title = '🧊' | append: title %}
+  {% assign page_title = title %}
 {% endif %}
 
 {% assign site_title = site.name %}

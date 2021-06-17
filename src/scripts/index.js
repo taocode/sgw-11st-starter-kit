@@ -37,7 +37,7 @@ function offsetFun() {
     return intro.offsetHeight + headroomOffset;
   }
 }
-var headroom = new Headroom(elem, {
+var topnav = new Headroom(elem, {
   offset: offsetFun(),
   tolerance: 5,
   // "classes": {
@@ -46,4 +46,22 @@ var headroom = new Headroom(elem, {
   //   "unpinned": "slideUp"
   // }
 });
-headroom.init();
+
+topnav.init();
+
+const targetNode = document.body;
+const obsConfig = { childList: true, subtree: false, attributes: false };
+const obsCallback = function (mutationsList, observer) {
+  var shareBtnElem = document.querySelector('.st-sticky-share-buttons');
+  if (!shareBtnElem) return;
+
+  var sideShare = new Headroom(shareBtnElem, {
+    offset: offsetFun(),
+    tolerance: 100,
+  });
+  console.log('initing sideshare()');
+  sideShare.init();
+  observer.disconnect();
+};
+const observer = new MutationObserver(obsCallback);
+observer.observe(targetNode, obsConfig);

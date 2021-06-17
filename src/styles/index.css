@@ -48,8 +48,6 @@ body {
   text-decoration-color: rgba(80,150,220,0.9);
 }
 
-
-
 sup {
   font-size: 0.6em;
   font-weight: 400;
@@ -137,16 +135,28 @@ h1,h2,h3,h4,h5,h6,li {
 .headroom {
   transition: transform 200ms linear;
   will-change: transform;
-  &:focus-within {
-    transform: translateY(0%);
-    z-index: 60;
-  }
 }
-.headroom--pinned {
+.topnav:focus-within {
+  transform: translateY(0%);
+  z-index: 60;
+}
+.topnav.headroom--pinned,
+.topnav.headroom--bottom.headroom--unpinned {
   transform: translateY(0%);
 }
-.headroom--unpinned {
+
+.topnav.headroom--unpinned {
   transform: translateY(-102%);
+}
+
+
+.st-sticky-share-buttons.headroom,
+.st-sticky-share-buttons.headroom.headroom--top {
+  transform: translateX(-102%);
+}
+.st-sticky-share-buttons.headroom.headroom--not-top,
+.st-sticky-share-buttons.headroom.headroom--pinned {
+    transform: translateX(0);
 }
 
 abbr[title] {
