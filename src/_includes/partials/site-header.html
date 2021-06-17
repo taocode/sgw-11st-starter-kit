@@ -1,6 +1,6 @@
 <a
   href="#main-content"
-  class="absolute -top-20 focus:top-0 text-sm left-0 p-2 md:p-4 z-50 text-white focus:text-gray-900"
+  class="skip-to-main absolute -top-20 focus:top-0 text-sm left-0 p-2 md:p-4 text-white focus:text-gray-900"
 >
   Skip to main
 </a>
@@ -127,4 +127,10 @@
       </ul>
     </nav>
   </header>
+</div>
+
+<div class="totop-container headroom fixed bottom-0 right-0 left-0">
+  <div class="mx-auto max-w-5xl text-right">
+  <button class="totop text-blue-300" onclick="window.scrollTo(0,0)">{% icon "chevron-up" %}<span class="sr-only">To Top</span></button>
+</div>
 </div>

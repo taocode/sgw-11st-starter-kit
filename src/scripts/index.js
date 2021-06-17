@@ -49,6 +49,13 @@ var topnav = new Headroom(elem, {
 
 topnav.init();
 
+const ttcontainer = document.querySelector('.totop-container');
+var totop = new Headroom(ttcontainer, {
+  offset: offsetFun(),
+  tolerance: 5,
+});
+totop.init();
+
 const targetNode = document.body;
 const obsConfig = { childList: true, subtree: false, attributes: false };
 const obsCallback = function (mutationsList, observer) {

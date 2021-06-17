@@ -140,6 +140,7 @@ h1,h2,h3,h4,h5,h6,li {
   transform: translateY(0%);
   z-index: 60;
 }
+
 .topnav.headroom--pinned,
 .topnav.headroom--bottom.headroom--unpinned {
   transform: translateY(0%);
@@ -149,16 +150,33 @@ h1,h2,h3,h4,h5,h6,li {
   transform: translateY(-102%);
 }
 
+.st-sticky-share-buttons.headroom {
+  transition: all 400ms ease;
+}
 
 .st-sticky-share-buttons.headroom,
 .st-sticky-share-buttons.headroom.headroom--top {
+  opacity: 0;
   transform: translateX(-102%);
 }
 .st-sticky-share-buttons.headroom.headroom--not-top,
 .st-sticky-share-buttons.headroom.headroom--pinned {
+    opacity: 1;
     transform: translateX(0);
 }
+.totop-container.headroom,
+.totop-container.headroom.headroom--top {
+  @apply h-24;
 
+  transform: translateY(102%);
+}
+.totop-container.headroom--pinned,
+.totop-container.headroom--bottom {
+  transform: translateY(0);
+}
+button.totop {
+  @apply bg-blue-400 text-white p-2 rounded-lg;
+}
 abbr[title] {
   position: relative;
   
