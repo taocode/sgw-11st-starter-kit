@@ -21,3 +21,6 @@ report.html
 
 # Local Netlify folder
 .netlify
+
+# Local Firebase folder
+.firebase
